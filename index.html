@@ -11,29 +11,36 @@
     <script src="https://kit.fontawesome.com/2cc4fadc53.js" crossorigin="anonymous"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="player.js"></script>
 </head>
 <body>
     <header class="bg h-100 d-flex justify-content-center align-items-center">
         <div class="row h-100 w-100">
                 <div class="col-sm-6 video p-0 d-none d-sm-block position-relative">
-                    <iframe src="https://www.youtube.com/embed/QN1odfjtMoo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <ul class="list-unstyled list-inline pt-3 px-3 position-absolute bottom-0 start-0">
+                    <video id='video-element'>
+                        <source src='pexels-charlotte.mp4' type='video/mp4'>
+                    </video>
+                    <ul class="list-unstyled list-inline pt-3 px-4 position-absolute bottom-0 start-0">
                         <li class="list-inline-item">
                             <a href="">
-                                <img src="img/fb_black.png" width="20">
+                                <img src="img/fb_black.png" width="30">
                             </a>
                         </li>
                         <li class="list-inline-item px-3">
                             <a href="">
-                                <img src="img/ig_black.png" width="20">
+                                <img src="img/ig_black.png" width="30">
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="">
-                                <img src="img/yt_black.png" width="20">
+                                <img src="img/yt_black.png" width="30">
                             </a>
                         </li>
                     </ul>
+                    <img  id='btnPlayPause' class='position-absolute bottom-0 end-0 mb-3 mx-4' onclick='playPauseVideo();' src="img/play.png" width="20">
+                    <!--
+                    <button id='btnPlayPause' class='play position-absolute bottom-0 end-0 mb-3 mx-3' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
+                    -->
                 </div>
                 <div class="col-sm-6 text-center login position-relative">
                     <img src="img/2.png" class="img-fluid logo">
